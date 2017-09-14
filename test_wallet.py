@@ -41,8 +41,7 @@ def test_wallet_spend_cash_raises_exception_on_insufficient_amount(empty_wallet)
     (20, 2, 18),
 ])
 
-def test_trasactions(earned, spent, expected):
-    my_wallet = Wallet()
-    my_wallet.add_cash(earned)
-    my_wallet.spend_cash(spent)
-    assert my_wallet.balance == expected
+def test_trasactions(empty_wallet,earned, spent, expected):
+    empty_wallet.add_cash(earned)
+    empty_wallet.spend_cash(spent)
+    assert empty_wallet.balance == expected
